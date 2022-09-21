@@ -3,8 +3,12 @@ const notificationSlice = createSlice({
   name: "notification",
   initialState: {
     notification: null,
+    cartIsOpened: false,
   },
   reducers: {
+    toggle(state) {
+      state.cartIsOpened = !state.cartIsOpened;
+    },
     setNotification(state, action) {
       state.notification = {
         status: action.payload.status,

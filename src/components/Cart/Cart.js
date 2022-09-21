@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { Fragment } from "react";
 
 const Cart = () => {
-  const cartIsOpened = useSelector((state) => state.cart.cartIsOpened);
+  const cartIsOpened = useSelector((state) => state.notification.cartIsOpened);
   const shoppingList = useSelector((state) => state.cart.shoppingList);
   const cartItems = shoppingList.map((item) => (
     <CartItem
